@@ -9,9 +9,16 @@
 
 require 'faker'
 
-100.times do
-    plane = Plane.create(brand: Faker::Company.bs,
-        model: Faker::Number.between(from = 1, to = 200),
-        fault: Faker::Lorem.paragraphs.join("<br>") )
+100.times do |num|
+    
+    plane = Plane.new
+    
+    plane.brand = Faker::App.name
+    
+    plane.model = Faker::Number.between(from = 1, to = 200)
+    
+    plane.fault = Faker::Lorem.paragraphs.join("<br>")
+
+    plane.save
 
 end

@@ -5,7 +5,8 @@ class PlanesController < ApplicationController
   # GET /planes
   # GET /planes.json
   def index
-    @planes = Plane.all
+    #@planes = Plane.all
+      @planes = Plane.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /planes/1
