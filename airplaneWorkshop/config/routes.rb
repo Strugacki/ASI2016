@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :planes
+  resources :airplanes
     resources :sessions, only: [:new, :create, :destroy]
     
     get 'signup', to: 'users#new', as: 'signup'
@@ -7,8 +9,6 @@ Rails.application.routes.draw do
     get 'logout', to: 'sessions#destroy', as: 'logout'
     
     resources :users
-    
-    resources :airplane
     
     get 'home/index'
     root 'home#index'
