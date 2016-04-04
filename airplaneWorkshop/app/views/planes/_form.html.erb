@@ -1,5 +1,5 @@
-<%= form_for(plane) do |f| %>
-  <% if plane.errors.any? %>
+<%= form_for @plane, :html => {:class => "form-horizontal center"} do |f| %>
+      <% if plane.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(plane.errors.count, "error") %> prohibited this plane from being saved:</h2>
 
@@ -10,23 +10,30 @@
       </ul>
     </div>
   <% end %>
+     <div class="row">
+         <div class="form-group">
+          <%= f.label :brand, "Brand:", class: "col-lg-2 col-md-2 col-sm-1 control-label" %>
+        <div class="col-lg-8 col-md-8 col-sm-10">
+          <%= f.text_field :brand, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+          <%= f.label :model, "Model:", class: "col-lg-2 col-md-2 col-sm-1 control-label" %>
+        <div class="col-lg-8 col-md-8 col-sm-10">
+            <%= f.text_field :model, class: "form-control" %>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :brand %>
-    <%= f.text_field :brand %>
-  </div>
-
-  <div class="field">
-    <%= f.label :model %>
-    <%= f.text_field :model %>
-  </div>
-
-  <div class="field">
-    <%= f.label :fault %>
-    <%= f.text_area :fault %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      <div class="form-group">
+        <%= f.label :fault, "Fault:", class: "col-lg-2 col-md-2 col-sm-1 control-label" %>
+        <div class="col-lg-8 col-md-8 col-sm-10">
+                    <%= f.text_area :fault, class: "form-control" %>
+        </div>
+      </div>
+      <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
+            </div>  
+        </div>
+     </div>  
+ <% end %>
