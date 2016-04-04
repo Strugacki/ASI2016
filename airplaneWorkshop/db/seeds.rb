@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+require 'faker'
+
+100.times do
+    plane = Plane.create(brand: Faker::Company.bs,
+        model: Faker::Number.between(from = 1, to = 200),
+        fault: Faker::Lorem.paragraphs.join("<br>") )
+
+end
