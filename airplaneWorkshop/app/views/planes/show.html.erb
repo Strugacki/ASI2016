@@ -1,19 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @plane.brand %>
-</p>
 
-<p>
-  <strong>Model:</strong>
-  <%= @plane.model %>
-</p>
+<div class="row">
+    <div class="col-lg-6 col-lg-push-3 col-md-8 col-md-push-2 col-sm-12">
+        <div class="panel panel-info">
+          <div class="panel-heading">Brand/Model: <%= @plane.brand %> <%= @plane.model %></div>
+          <div class="panel-body"><%= @plane.fault %></div>
+          <div class="panel-footer text-center">
+                  <%= link_to 'Edit', edit_plane_path(@plane) %> |
+                <%= link_to 'Back', planes_path %>
+          </div>
+        </div>
+    </div>
+</div>
 
-<p>
-  <strong>Fault:</strong>
-  <%= @plane.fault %>
-</p>
-
-<%= link_to 'Edit', edit_plane_path(@plane) %> |
-<%= link_to 'Back', planes_path %>
