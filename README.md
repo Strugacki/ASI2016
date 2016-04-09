@@ -10,7 +10,7 @@ Architektura Serwisów Internetowych 2016 Uniwersytet Gdański / Websites archit
  
 | Wersja Ruby   | Wersja Rails   | Baza danych |
 |------------|---------|-------------|
-|    2.3.0p0   | 5.0.0.beta3  | postgres(heroku)  |
+|    2.3.0p0   | 5.0.0.beta3  | postgres  |
 
 - Opis aplikacji:
 
@@ -24,5 +24,5 @@ Architektura Serwisów Internetowych 2016 Uniwersytet Gdański / Websites archit
 
 - Opis aplikacji:
 
-
+Aplikacja zawiera bazę danych samolotów w warsztacie z informacją o marce, modelu oraz usterce
 
