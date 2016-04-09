@@ -14,6 +14,8 @@ Architektura Serwisów Internetowych 2016 Uniwersytet Gdański / Websites archit
 
 - Opis aplikacji:
 
+Aplikacja zawiera bazę danych samolotów w warsztacie z informacją o marce, modelu oraz usterce
+
 <b>2. Egzamin:</b>
  - [ ] [nazwa aplikacji](egzamin)
  - [ ] [link do wdrożonej na zewnętrznym serwerze aplikacji](/)
@@ -24,5 +26,4 @@ Architektura Serwisów Internetowych 2016 Uniwersytet Gdański / Websites archit
 
 - Opis aplikacji:
 
-Aplikacja zawiera bazę danych samolotów w warsztacie z informacją o marce, modelu oraz usterce
 
